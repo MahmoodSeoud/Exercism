@@ -44,13 +44,13 @@ public class DifferenceOfSquaresTests
         Assert.Equal(0, DifferenceOfSquares.CalculateDifferenceOfSquares(1));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Difference_of_squares_5()
     {
         Assert.Equal(170, DifferenceOfSquares.CalculateDifferenceOfSquares(5));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Difference_of_squares_100()
     {
         Assert.Equal(25164150, DifferenceOfSquares.CalculateDifferenceOfSquares(100));
