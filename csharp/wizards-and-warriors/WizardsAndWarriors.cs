@@ -33,8 +33,8 @@ class Warrior : Character
     {
         if (target.Vulnerable())
             return 10;
-        else
-            return 6;
+
+        return 6;
     }
 }
 
@@ -49,8 +49,8 @@ class Wizard : Character
     {
         if (spellIsPreped)
             return 12;
-        else 
-            return 3;
+
+        return 3;
     }
 
 
