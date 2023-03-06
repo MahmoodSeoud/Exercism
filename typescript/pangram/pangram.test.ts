@@ -1,7 +1,7 @@
 import { isPangram } from './pangram'
 
 describe('Pangram()', () => {
-  xit('empty sentence', () => {
+  it('empty sentence', () => {
     expect(isPangram('')).toBe(false)
   })
 
