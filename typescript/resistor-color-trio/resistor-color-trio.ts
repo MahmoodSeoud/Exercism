@@ -23,8 +23,18 @@ for (let index = 0; index < expValue; index++) {
   zeros.push(0)
 }
 
-return zeros.length >= 3 ?
-  `${value1 > 0 && value1}${value2 > 0 && value2} kiloohms` :
-  `${value1}${value2}${zeros.length > 0 && zeros} ohms` 
+if(zeros.length == 4){
+  return `${value1 > 0 && value1}${value2 > 0 && value2} kiloohms` 
+}
+
+if(zeros.length == 6){
+  return `${value1 > 0 && value1}${value2 > 0 && value2} megaohms` 
+}
+
+if(zeros.length == 9){
+  return `${value1 > 0 && value1}${value2 > 0 && value2} gigaohms` 
+}
+
+return `${value1}${value2}${zeros.length > 0 && zeros.toString()} ohms` 
 
 }
