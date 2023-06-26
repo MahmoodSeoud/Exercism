@@ -20,8 +20,8 @@ def four_of_a_kind(dice: list[int]):
     dice_counter:Counter = Counter(dice)
     if dice_counter.most_common()[0][1] >= 4:
         return dice_counter.most_common()[0][0] * 4
-    else: 
-        return 0
+    
+    return 0
 
 
 def nums(dice: list[int], num: int):
