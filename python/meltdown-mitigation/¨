@@ -67,8 +67,11 @@ def fail_safe(temperature, neutrons_produced_per_second, threshold):
     power = temperature * neutrons_produced_per_second
 
     LOW =  power < 0.9 * threshold
-    NORMAL = power <= threshold * 0.9 or power == threshold or power <= threshold * 1.1
+        NORMAL = power >= threshold - (threshold * 0.1) or power == threshold or power <= (threshold * 1.1) - threshold
 
+    print("NORMAL:", NORMAL, "power", power, "threshold", threshold)
+    print((threshold * 1.1 )-  threshold)
+    print(power <= (threshold * 1.1) - threshold)
     if(LOW):
         return 'LOW'
     elif(NORMAL):
