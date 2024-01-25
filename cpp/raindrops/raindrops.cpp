@@ -1,4 +1,5 @@
 #include "raindrops.h"
+#include <string>
 
 namespace raindrops
 {
