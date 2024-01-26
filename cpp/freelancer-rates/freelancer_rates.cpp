@@ -1,7 +1,5 @@
 // INFO: Headers from the standard library should be inserted at the top via
-#include <string>
-#include <iostream>
-// #include <LIBRARY_NAME>
+#include <cmath> 
 
 // daily_rate calculates the daily rate given an hourly rate
 double daily_rate(double hourly_rate)
@@ -26,7 +24,7 @@ int monthly_rate(double hourly_rate, double discount)
     double before_discount = billable_days * daily_income;
 
     double amount_after_discount = apply_discount(before_discount, discount);
-    return std::ceil(amount_after_discount);
+    return ceil(amount_after_discount);
 }
 
 // days_in_budget calculates the number of workdays given a budget, hourly rate,
@@ -39,9 +37,8 @@ int days_in_budget(int budget, double hourly_rate, double discount)
     int daily_income = daily_rate(hourly_rate);
 
     int after_discount = apply_discount(daily_income, discount);
-    
 
     int work_days = budget / after_discount;
 
-    return work_days;
+    return floor(work_days);
 }
