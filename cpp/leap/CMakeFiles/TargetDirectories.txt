@@ -1,0 +1,4 @@
+/Users/mahmood/Exercism/cpp/leap/CMakeFiles/leap.dir
+/Users/mahmood/Exercism/cpp/leap/CMakeFiles/test_leap.dir
+/Users/mahmood/Exercism/cpp/leap/CMakeFiles/edit_cache.dir
+/Users/mahmood/Exercism/cpp/leap/CMakeFiles/rebuild_cache.dir
