@@ -1,22 +1,38 @@
 #include "atbash_cipher.h"
-#include <iostream>
+using namespace std;
 
 namespace atbash_cipher {
 
-    std::string encode(std::string str){
-        std::string alphabet="abcdefghijklmnopqrstuvwxyz";
-        std::string msg = "";
+    string alphabet="abcdefghijklmnopqrstuvwxyz";
 
-        for (size_t i = 0; i < str.size(); i++){
-            int pos = alphabet.find(str[i]);
-            char ferro =  alphabet[(alphabet.size()-1) - pos];
-            std::cout << ferro << "\n";
-            msg += ferro;
-        }
+    char reverse_alpha_char(char c){
+        if(!isalpha(c)) return c;
+        return alphabet[(alphabet.size() - 1) - alphabet.find(c)];
+    }
 
-        return msg;
+
+    string encode(string input){
+        string output = input;
+
+        // Replace all non words chars
+        output = regex_replace(output, regex(R"([\W])"),"");
+        
+        // Invert the string as the atbash_cipher
+        for (char& c: output) c = reverse_alpha_char(tolower(c));
+        
+        // Chop it groups of five
+        for(auto i = output.begin() + 5; i < output.end(); i += 6) output.insert(i, ' ');
+
+        return output;
     }
         
-   // std::string decode(std::string);
-   //
+   string decode(string input){
+       string output = input;
+        for (char& c: output) c = reverse_alpha_char(towlower(c));
+        output = regex_replace(output, regex(R"([\W])"),"");
+
+       return output;
+   }
+
+   
 }  // namespace atbash_cipher

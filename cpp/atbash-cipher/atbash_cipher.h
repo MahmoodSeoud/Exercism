@@ -1,6 +1,9 @@
 #if !defined(ATBASH_CIPHER_H)
 #define ATBASH_CIPHER_H
 #include <string>
+#include <iostream>
+#include <regex>
+#include <cctype>
 
 namespace atbash_cipher {
     std::string encode(std::string str);
