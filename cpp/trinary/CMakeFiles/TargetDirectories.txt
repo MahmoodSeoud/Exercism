@@ -1,0 +1,4 @@
+/Users/mahmood/Exercism/cpp/trinary/CMakeFiles/trinary.dir
+/Users/mahmood/Exercism/cpp/trinary/CMakeFiles/test_trinary.dir
+/Users/mahmood/Exercism/cpp/trinary/CMakeFiles/edit_cache.dir
+/Users/mahmood/Exercism/cpp/trinary/CMakeFiles/rebuild_cache.dir
