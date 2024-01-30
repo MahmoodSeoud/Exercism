@@ -1,44 +1,31 @@
 #include "bob.h"
+
 using namespace std;
 
 namespace bob {
-    bool all_is_uppercase(string str){
-        regex pattern(R"([^a-zA-Z])"); 
-        string temp =  regex_replace(str, pattern, "");
-        if (temp.empty()) return false;
-        auto is_upper = [](char c){ return isupper(c); };
-
-        return all_of(temp.begin(), temp.end(), is_upper);
-
-    }
-
-    bool all_is_whitespace(string str){
-    
-        if (str.empty()) return true; 
-        for(auto it = str.begin(); it < str.end(); ++it){
-            if (!isspace(*it)) return false;
-        }
-        return true;
-    }
-
-    bool ending_with_question_mark(string str){
-        regex pattern(R"([\s])");
-        str = regex_replace(str, pattern, "");
+    string hey(string str) {
+        bool question, upperCase, lowerCase;
+        question = upperCase = lowerCase = false;
+        bool empty = true;
         
-        return str.back() == '?';
-    }
+        for (char& c : str) {
+            if (islower(c)) lowerCase = true;
+            if (isupper(c)) upperCase = true;
 
-    string hey(string str){
-        //Kstr = regex_replace(str, regex(R"([\s])") , "");
-         //long capital_count = 0, whitespace_count = 0;
-        bool all_captial_letters = all_is_uppercase(str);
-        bool all_empty  = all_is_whitespace(str);
-        bool ending_question_mark = ending_with_question_mark(str);
+            if (!isspace(c)) {
+                question = false;
+                empty = false;
+            }
 
-        if(all_empty) return "Fine. Be that way!";
-        else if(all_captial_letters && ending_question_mark) return "Calm down, I know what I'm doing!";
-        else if(all_captial_letters) return "Whoa, chill out!";
-        else if(ending_question_mark) return "Sure.";
-        else return "Whatever.";
+            if (c == '?') question = true;
+        }
+        
+        bool shouting = upperCase && !lowerCase;
+        if (shouting && question) return "Calm down, I know what I'm doing!";
+        if (shouting) return "Whoa, chill out!";
+        if (question) return "Sure.";
+        if (empty) return "Fine. Be that way!";
+
+        return "Whatever.";
     }
 }  // namespace bob
