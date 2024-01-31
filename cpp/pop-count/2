@@ -1,0 +1,26 @@
+#include "pop_count.h"
+
+using namespace std;
+namespace chicken_coop {
+
+    int positions_to_quantity(int num){
+        int binary = 0, remainder, product = 1;
+        while (num != 0) {
+            remainder = num % 2;
+            binary += remainder * product;
+            num  /= 2;
+            product *= 10;
+        }
+
+        string binary_str = to_string(binary);
+        int count = 0;
+        for (auto it = binary_str.begin(); it < binary_str.end(); ++it) {
+            if (*it == '1') count++;
+        }
+
+
+        cout << "binary:" << binary << endl;
+        return count;
+    }
+
+}  // namespace chicken_coop
