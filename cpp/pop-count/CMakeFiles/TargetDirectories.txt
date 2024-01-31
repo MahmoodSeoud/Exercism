@@ -1,0 +1,4 @@
+C:/Users/mahmo/Exercism/cpp/pop-count/CMakeFiles/pop-count.dir
+C:/Users/mahmo/Exercism/cpp/pop-count/CMakeFiles/test_pop-count.dir
+C:/Users/mahmo/Exercism/cpp/pop-count/CMakeFiles/edit_cache.dir
+C:/Users/mahmo/Exercism/cpp/pop-count/CMakeFiles/rebuild_cache.dir
