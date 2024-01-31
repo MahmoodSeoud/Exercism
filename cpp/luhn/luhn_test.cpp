@@ -33,7 +33,6 @@ TEST_CASE("a_simple_valid_SIN_that_remains_valid_if_reversed")
 
     REQUIRE(expected == actual);
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("a_simple_valid_SIN_that_becomes_invalid_if_reversed")
 {
@@ -160,4 +159,5 @@ TEST_CASE("strings_with_non_digits_is_invalid")
 
     REQUIRE(expected == actual);
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
