@@ -1,0 +1,4 @@
+[0m[[0m[0mdebug[0m] [0m[0m[leap-test] Classpath dependencies List()[0m
+[0m[[0m[0mdebug[0m] [0m[0m[leap-test] Dependencies from configurations List(leap)[0m
+[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'leap-test' to '/Users/mahmood/Exercism/scala/leap/.bloop/leap-test.json'[0m
+[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop/leap-test.json[0m
