@@ -1,6 +1,7 @@
 #if !defined(ARMSTRONG_NUMBERS_H)
 #define ARMSTRONG_NUMBERS_H
 #include <iostream>
+#include <cmath>
 
 namespace armstrong_numbers {
     bool is_armstrong_number(int number);
