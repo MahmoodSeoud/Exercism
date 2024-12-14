@@ -1,38 +1,19 @@
 #include "armstrong_numbers.h"
+#include <math.h>
 #include <stdio.h>
+#include <string.h>
 
-int power(int x, unsigned int y){
-    if(y == 0)
-        return 1;
-        
-    if(y % 2 == 0)
-        return power(x, y / 2) *  power(x, y / 2);
-    return x * power(x, y / 2) *  power(x, y / 2);
-    
-}
+bool is_armstrong_number(int candidate) {
 
-int order(int x)
-{
-    int n = 0;
-    while (x) {
-        n++;
-        x = x / 10;
-    }
-    return n;
-}
+  // Convert candidate to str
+  char scandidate[12];
+  sprintf(scandidate, "%d", candidate);
 
+  int sum = 0;
+  for (long unsigned i = 0; i < strlen(scandidate); i++) {
+    int x = scandidate[i] - '0'; // Convert char to int
+    sum += pow(x, strlen(scandidate));
+  }
 
-bool is_armstrong_number(int candidate){
-    int n = order(candidate);
-    int temp = candidate, sum = 0;
-    while (temp) {
-            int r = temp % 10;
-            sum += power(r, n);
-            temp = temp / 10;
-        }
-        // If satisfies Armstrong condition
-        if (sum == candidate)
-            return 1;
-        else
-            return 0;
+  return sum == candidate;
 }
