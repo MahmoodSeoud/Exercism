@@ -1,0 +1,167 @@
+#include "collatz_conjecture.h"
+#include <stdio.h>
+
+int steps(int start) {
+  if (start == 1) {
+    return
+  }
+  if (start % 2 == 0) {
+    return 1 + steps(start / 2);
+  }
+  return 1 + steps(3 * start + 1);
+}
+
+// -----Step: 1-------
+// int count = 0;
+// int steps(12) {
+//   if (start == 1) { // False
+//     return count;
+//   }
+//   if (start % 2 == 0) { // True
+//     count++;
+//     return steps(start / 2);
+//   }
+//   count++;
+//   return steps(3 * start + 1);
+// }
+//
+
+// -----Step: 2-------
+// int count = 0;
+// int steps(6) {
+//   if (start == 1) { // False
+//     return count;
+//   }
+//   if (start % 2 == 0) { // True
+//     count++;
+//     return steps(start / 2);
+//   }
+//   count++;
+//   return steps(3 * start + 1);
+// }
+
+// -----Step: 3-------
+// int count = 0;
+// int steps(3) {
+//   if (start == 1) { // False
+//     return count;
+//   }
+//   if (start % 2 == 0) { // False
+//     count++;
+//     return steps(start / 2);
+//   }
+//   count++;
+//   return steps(3 * start + 1);
+// }
+
+// -----Step: 4-------
+// int count = 0;
+// int steps(10) {
+//   if (start == 1) { // False
+//     return count;
+//   }
+//   if (start % 2 == 0) { // True
+//     count++;
+//     return steps(start / 2);
+//   }
+//   count++;
+//   return steps(3 * start + 1);
+// }
+
+// -----Step: 5-------
+// int count = 0;
+// int steps(5) {
+//   if (start == 1) { // False
+//     return count;
+//   }
+//   if (start % 2 == 0) { // False
+//     count++;
+//     return steps(start / 2);
+//   }
+//   count++;
+//   return steps(3 * start + 1);
+// }
+
+// -----Step: 6-------
+// int count = 0;
+// int steps(16) {
+//   if (start == 1) { // False
+//     return count;
+//   }
+//   if (start % 2 == 0) { // False
+//     count++;
+//     return steps(start / 2);
+//   }
+//   count++;
+//   return steps(3 * start + 1);
+// }
+
+// -----Step: 7-------
+// int count = 0;
+// int steps(8) {
+//   if (start == 1) { // False
+//     return count;
+//   }
+//   if (start % 2 == 0) { // False
+//     count++;
+//     return steps(start / 2);
+//   }
+//   count++;
+//   return steps(3 * start + 1);
+// }
+
+// -----Step: 8-------
+// int count = 0;
+// int steps(8) {
+//   if (start == 1) { // False
+//     return count;
+//   }
+//   if (start % 2 == 0) { // False
+//     count++;
+//     return steps(start / 2);
+//   }
+//   count++;
+//   return steps(3 * start + 1);
+// }
+
+// -----Step: 9-------
+// int count = 0;
+// int steps(4) {
+//   if (start == 1) { // False
+//     return count;
+//   }
+//   if (start % 2 == 0) { // False
+//     count++;
+//     return steps(start / 2);
+//   }
+//   count++;
+//   return steps(3 * start + 1);
+// }
+
+// -----Step: 9-------
+// int count = 0;
+// int steps(2) {
+//   if (start == 1) { // True
+//     return count;
+//   }
+//   if (start % 2 == 0) { // False
+//     count++;
+//     return steps(start / 2);
+//   }
+//   count++;
+//   return steps(3 * start + 1);
+// }
+
+// -----Step: 10-------
+// int count = 0;
+// int steps(1) {
+//   if (start == 1) { // True
+//     return count;
+//   }
+//   if (start % 2 == 0) { // False
+//     count++;
+//     return steps(start / 2);
+//   }
+//   count++;
+//   return steps(3 * start + 1);
+// }
