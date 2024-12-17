@@ -26,7 +26,7 @@ char *to_rna(const char *dna) {
       break;
     }
 
-    if (!dna[i]) { // End of dna strand -> jump out of loop
+    if (!rna[i]) { // End of strand -> jump out of loop
       free(rna);   // remember to free the allocted mem
       return NULL;
     }
