@@ -15,11 +15,11 @@ bool luhn(const char *num) {
 
   for (int i = str_len - 1; i >= 0; i--) {
     if (num[i] != ' ') {
-      int digit = num[i] - '0';
       if (!(num[i] >= '0' && num[i] <= '9')) { // If its a not number
         return false;
       }
 
+      int digit = num[i] - '0';
       if (flag) {
         digit = 2 * digit;
         if (digit > 9) {
