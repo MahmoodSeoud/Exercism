@@ -1,5 +1,4 @@
 #include "clock.h"
-#include <stdio.h>
 
 clock_t clock_create(int hour, int minute) {
 
