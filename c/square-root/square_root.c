@@ -14,9 +14,9 @@ uint16_t square_root(uint16_t n) {
     if (square == n)
       return mid;
     else if (n < square)
-      high = mid;
+      high = mid - 1;
     else
-      low = mid;
+      low = mid + 1;
   }
 
   return 0;
