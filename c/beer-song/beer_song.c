@@ -2,7 +2,17 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define OrWhiteSpace(S) (S > 1 ? "bottles" : "bottle")
+#define BOTTLE_VS_BOTTLES(S) (S > 1 ? "bottles" : "bottle")
+
+#define X_BEER "%d %s of beer on the wall, %d %s of beer."
+#define NO_MORE_BOTTLES                                                        \
+  "No more bottles of beer on the wall, no more bottles of beer."
+#define GO_TO_STORE                                                            \
+  "Go to the store and buy some more, 99 bottles of beer on the wall."
+#define TAKE_NOT_LAST                                                          \
+  "Take one down and pass it around, %d %s of beer on the wall."
+#define TAKE_LAST                                                              \
+  "Take it down and pass it around, no more bottles of beer on the wall."
 
 void recite(uint8_t start_bottles, uint8_t take_down, char **song) {
 
@@ -10,25 +20,19 @@ void recite(uint8_t start_bottles, uint8_t take_down, char **song) {
   for (uint8_t i = 0; i < take_down; i++, song += 3, start_bottles--) {
 
     if (start_bottles == 0) {
-      sprintf(song[0],
-              "No more bottles of beer on the wall, no more bottles of beer.");
-      sprintf(
-          song[1],
-          "Go to the store and buy some more, 99 bottles of beer on the wall.");
-      break;
+      sprintf(song[0], NO_MORE_BOTTLES);
+      sprintf(song[1], GO_TO_STORE);
+      return;
     }
 
-    sprintf(song[0], "%d %s of beer on the wall, %d %s of beer.", start_bottles,
-            OrWhiteSpace(start_bottles), start_bottles,
-            OrWhiteSpace(start_bottles));
+    sprintf(song[0], X_BEER, start_bottles, BOTTLE_VS_BOTTLES(start_bottles),
+            start_bottles, BOTTLE_VS_BOTTLES(start_bottles));
 
     if (start_bottles - 1 > 0) {
-      sprintf(song[1],
-              "Take one down and pass it around, %d %s of beer on the wall.",
-              start_bottles - 1, OrWhiteSpace(start_bottles - 1));
+      sprintf(song[1], TAKE_NOT_LAST, start_bottles - 1,
+              BOTTLE_VS_BOTTLES(start_bottles - 1));
     } else {
-      sprintf(song[1], "Take it down and pass it around, no more bottles of "
-                       "beer on the wall.");
+      sprintf(song[1], TAKE_LAST);
     }
     song[2][0] = '\0';
   }
