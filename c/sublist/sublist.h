@@ -1,7 +1,10 @@
 #ifndef SUBLIST_H
 #define SUBLIST_H
 
+#include <math.h>
+#include <stdbool.h>
 #include <stddef.h>
+#include <string.h>
 
 typedef enum { EQUAL, UNEQUAL, SUBLIST, SUPERLIST } comparison_result_t;
 
