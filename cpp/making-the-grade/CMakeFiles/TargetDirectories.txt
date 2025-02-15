@@ -1,4 +1,4 @@
-C:/Users/mahmo/Exercism/cpp/making-the-grade/CMakeFiles/making-the-grade.dir
-C:/Users/mahmo/Exercism/cpp/making-the-grade/CMakeFiles/test_making-the-grade.dir
-C:/Users/mahmo/Exercism/cpp/making-the-grade/CMakeFiles/edit_cache.dir
-C:/Users/mahmo/Exercism/cpp/making-the-grade/CMakeFiles/rebuild_cache.dir
+/Users/mahmood/Exercism/cpp/making-the-grade/CMakeFiles/making-the-grade.dir
+/Users/mahmood/Exercism/cpp/making-the-grade/CMakeFiles/test_making-the-grade.dir
+/Users/mahmood/Exercism/cpp/making-the-grade/CMakeFiles/edit_cache.dir
+/Users/mahmood/Exercism/cpp/making-the-grade/CMakeFiles/rebuild_cache.dir

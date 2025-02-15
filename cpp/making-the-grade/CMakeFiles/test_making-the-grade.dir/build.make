@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "C:/Program Files/CMake/bin/cmake.exe"
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake
 
 # The command to remove a file.
-RM = "C:/Program Files/CMake/bin/cmake.exe" -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Users/mahmo/Exercism/cpp/making-the-grade
+CMAKE_SOURCE_DIR = /Users/mahmood/Exercism/cpp/making-the-grade
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Users/mahmo/Exercism/cpp/making-the-grade
+CMAKE_BINARY_DIR = /Users/mahmood/Exercism/cpp/making-the-grade
 
 # Utility rule file for test_making-the-grade.
 
@@ -66,8 +66,8 @@ include CMakeFiles/test_making-the-grade.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/test_making-the-grade.dir/progress.make
 
-CMakeFiles/test_making-the-grade: making-the-grade.exe
-	./making-the-grade.exe
+CMakeFiles/test_making-the-grade: making-the-grade
+	./making-the-grade
 
 test_making-the-grade: CMakeFiles/test_making-the-grade
 test_making-the-grade: CMakeFiles/test_making-the-grade.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/test_making-the-grade.dir/clean:
 .PHONY : CMakeFiles/test_making-the-grade.dir/clean
 
 CMakeFiles/test_making-the-grade.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Users/mahmo/Exercism/cpp/making-the-grade C:/Users/mahmo/Exercism/cpp/making-the-grade C:/Users/mahmo/Exercism/cpp/making-the-grade C:/Users/mahmo/Exercism/cpp/making-the-grade C:/Users/mahmo/Exercism/cpp/making-the-grade/CMakeFiles/test_making-the-grade.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/mahmood/Exercism/cpp/making-the-grade && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mahmood/Exercism/cpp/making-the-grade /Users/mahmood/Exercism/cpp/making-the-grade /Users/mahmood/Exercism/cpp/making-the-grade /Users/mahmood/Exercism/cpp/making-the-grade /Users/mahmood/Exercism/cpp/making-the-grade/CMakeFiles/test_making-the-grade.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/test_making-the-grade.dir/depend
 

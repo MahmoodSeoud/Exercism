@@ -1113,3 +1113,8 @@ SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@17fe754
 2024.10.19 22:55:18 INFO  time: compiled leap in 0.31s[0m
 2024.10.19 22:55:20 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.[0m
 2024.10.19 22:55:20 INFO  time: indexed workspace in 4.16s[0m
+2024.10.19 22:58:48 INFO  Shutting down server[0m
+2024.10.19 22:58:48 INFO  shutting down Metals[0m
+2024.10.19 22:58:48 INFO  Shut down connection with build server.[0m
+2024.10.19 22:58:48 INFO  Shut down connection with build server.[0m
+2024.10.19 22:58:48 INFO  Exiting server[0m

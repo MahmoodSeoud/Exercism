@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "C:/Program Files/CMake/bin/cmake.exe"
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake
 
 # The command to remove a file.
-RM = "C:/Program Files/CMake/bin/cmake.exe" -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Users/mahmo/Exercism/cpp/making-the-grade
+CMAKE_SOURCE_DIR = /Users/mahmood/Exercism/cpp/making-the-grade
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Users/mahmo/Exercism/cpp/making-the-grade
+CMAKE_BINARY_DIR = /Users/mahmood/Exercism/cpp/making-the-grade
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = C:/Users/mahmo/Exercism/cpp/making-the-grade
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	"C:/Program Files/CMake/bin/cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.28.3/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	"C:/Program Files/CMake/bin/cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.28.3/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/mahmo/Exercism/cpp/making-the-grade/CMakeFiles C:/Users/mahmo/Exercism/cpp/making-the-grade//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mahmood/Exercism/cpp/making-the-grade/CMakeFiles /Users/mahmood/Exercism/cpp/making-the-grade//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/mahmo/Exercism/cpp/making-the-grade/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mahmood/Exercism/cpp/making-the-grade/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,13 +142,13 @@ test_making-the-grade/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_making-the-grade.dir/build.make CMakeFiles/test_making-the-grade.dir/build
 .PHONY : test_making-the-grade/fast
 
-making_the_grade_test.obj: making_the_grade_test.cpp.obj
-.PHONY : making_the_grade_test.obj
+making_the_grade_test.o: making_the_grade_test.cpp.o
+.PHONY : making_the_grade_test.o
 
 # target to build an object file
-making_the_grade_test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/making-the-grade.dir/build.make CMakeFiles/making-the-grade.dir/making_the_grade_test.cpp.obj
-.PHONY : making_the_grade_test.cpp.obj
+making_the_grade_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/making-the-grade.dir/build.make CMakeFiles/making-the-grade.dir/making_the_grade_test.cpp.o
+.PHONY : making_the_grade_test.cpp.o
 
 making_the_grade_test.i: making_the_grade_test.cpp.i
 .PHONY : making_the_grade_test.i
@@ -166,13 +166,13 @@ making_the_grade_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/making-the-grade.dir/build.make CMakeFiles/making-the-grade.dir/making_the_grade_test.cpp.s
 .PHONY : making_the_grade_test.cpp.s
 
-test/tests-main.obj: test/tests-main.cpp.obj
-.PHONY : test/tests-main.obj
+test/tests-main.o: test/tests-main.cpp.o
+.PHONY : test/tests-main.o
 
 # target to build an object file
-test/tests-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/making-the-grade.dir/build.make CMakeFiles/making-the-grade.dir/test/tests-main.cpp.obj
-.PHONY : test/tests-main.cpp.obj
+test/tests-main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/making-the-grade.dir/build.make CMakeFiles/making-the-grade.dir/test/tests-main.cpp.o
+.PHONY : test/tests-main.cpp.o
 
 test/tests-main.i: test/tests-main.cpp.i
 .PHONY : test/tests-main.i
@@ -200,10 +200,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test_making-the-grade"
 	@echo "... making-the-grade"
-	@echo "... making_the_grade_test.obj"
+	@echo "... making_the_grade_test.o"
 	@echo "... making_the_grade_test.i"
 	@echo "... making_the_grade_test.s"
-	@echo "... test/tests-main.obj"
+	@echo "... test/tests-main.o"
 	@echo "... test/tests-main.i"
 	@echo "... test/tests-main.s"
 .PHONY : help

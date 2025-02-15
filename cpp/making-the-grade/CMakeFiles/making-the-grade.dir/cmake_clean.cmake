@@ -1,11 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/making-the-grade.dir/making_the_grade_test.cpp.obj"
-  "CMakeFiles/making-the-grade.dir/making_the_grade_test.cpp.obj.d"
-  "CMakeFiles/making-the-grade.dir/test/tests-main.cpp.obj"
-  "CMakeFiles/making-the-grade.dir/test/tests-main.cpp.obj.d"
-  "libmaking-the-grade.dll.a"
-  "making-the-grade.exe"
-  "making-the-grade.exe.manifest"
+  "CMakeFiles/making-the-grade.dir/making_the_grade_test.cpp.o"
+  "CMakeFiles/making-the-grade.dir/making_the_grade_test.cpp.o.d"
+  "CMakeFiles/making-the-grade.dir/test/tests-main.cpp.o"
+  "CMakeFiles/making-the-grade.dir/test/tests-main.cpp.o.d"
+  "making-the-grade"
   "making-the-grade.pdb"
 )
 

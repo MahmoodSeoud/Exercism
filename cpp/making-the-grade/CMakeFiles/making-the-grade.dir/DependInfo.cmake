@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/mahmo/Exercism/cpp/making-the-grade/making_the_grade_test.cpp" "CMakeFiles/making-the-grade.dir/making_the_grade_test.cpp.obj" "gcc" "CMakeFiles/making-the-grade.dir/making_the_grade_test.cpp.obj.d"
-  "C:/Users/mahmo/Exercism/cpp/making-the-grade/test/tests-main.cpp" "CMakeFiles/making-the-grade.dir/test/tests-main.cpp.obj" "gcc" "CMakeFiles/making-the-grade.dir/test/tests-main.cpp.obj.d"
+  "/Users/mahmood/Exercism/cpp/making-the-grade/making_the_grade_test.cpp" "CMakeFiles/making-the-grade.dir/making_the_grade_test.cpp.o" "gcc" "CMakeFiles/making-the-grade.dir/making_the_grade_test.cpp.o.d"
+  "/Users/mahmood/Exercism/cpp/making-the-grade/test/tests-main.cpp" "CMakeFiles/making-the-grade.dir/test/tests-main.cpp.o" "gcc" "CMakeFiles/making-the-grade.dir/test/tests-main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
