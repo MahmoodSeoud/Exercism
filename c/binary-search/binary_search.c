@@ -1,5 +1,4 @@
 #include "binary_search.h"
-#include <math.h>
 
 const int *binary_search(int value, const int *arr, size_t length) {
   if (length == 0)
@@ -13,10 +12,10 @@ const int *binary_search(int value, const int *arr, size_t length) {
     mid = low + (high - low) / 2;
     if (arr[mid] == value)
       return &arr[mid]; /* match found */
-    if (value < arr[mid])
-      high = mid - 1;
-    else
+    if (arr[mid] < value)
       low = mid + 1;
+    else
+      high = mid - 1;
   }
 
   return NULL; /* no match */
